@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
+    <!--the main language of the document is Arabic
+        and the direction "Right-to-Left"-->
     <head>
         <title>مَرشَد</title>
+        <!--the website's title for the browser tab-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="https://developer.mozilla.org/static/img/favicon32.png">
+        <!--the website's icon (needs update)-->
         <meta charset="utf-8">
         <meta name="author" content="Jannat Mgawshi, Aya Saher">
         <meta name="description" content="Career counselling platform">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!--This meta tag tells mobile browsers that they should set the width of the viewport to the device width,
+            and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
+            Why is this needed?
+            Because mobile browsers tend to lie about their viewport width.-->
+        <meta property="og:image" content="">
+        <meta property="og:description" content="">
+        <meta property="og:title" content="مَرشَد للإرشاد المهني">
+        <!--Open Graph Data is a metadata protocol that Facebook invented to provide richer metadata for websites
+            One effect of this is that when you link to the Website on facebook,
+            the link appears along with an image and description: a richer experience for users.-->
+        <meta name="twitter:title" content="مَرشَد للإرشاد المهني">
+        <!--metadata property called Twitter Cards-->
         <link rel="stylesheet" href="styles/index.css">
+        <!--stylesheet, which indicates that it is the document's stylesheet,
+            and href, which contains the path to the stylesheet file-->
+        <script src="" defer></script>
     </head>
     <body>
         <nav>
-            <a href="index.html" class="logo"><img src="images/Marshad logo.png" width="110px" height="60px"></a>
+            <a href="index.html" class="logo"><img src="images/Marshad logo.png" width="110px" height="60px"
+                alt="Marshad logo"></a>
             <!--logo-->
             <ul class="nobullets main-nav">
                 <li><a href="#">المدونة</a></li>
@@ -21,51 +44,226 @@
         </nav>
         <header>
             <h1>O*NET Interest Profiler</h1>
-            <p>يعينك على استكشاف اهتماماتك، وعلاقتها بعالم العمل،
+            <p>60 سؤالا حول المهام التي يقوم بها الناس في وظائفهم
+                <br><br>
+                يعينك على استكشاف اهتماماتك وعلاقتها بعالم العمل،
+                <br>
                 واتخاذ القرار حول المهن التي يمكن أن تناسبك!
             </p>    
         </header>
         <main>
-            <section id="test-advice">
-                <h2>60 سؤالًا</h2>
-                <p>حول مهام العمل التي يقوم بها الناس في وظائفهم</p>
-                <h2>اقرأ الأسئلة بتمعّن،</h2>
+            <section id="test-tips">
+                <h2>خذ وقتك في قراءة السؤال</h2>
                 <p>ثم قرّر كيف تشعر حيال القيام بهذا العمل..</p>
                 <h2>لا تفكر:</h2>
-                <p>إذا كنت مؤهلا للقيام بالعمل<br>
-                كم ستقبض لقاء أداء هذا العمل
+                <p>إذا كنت مؤهلا للقيام بالعمل، أو كم سيكون راتبك
                 </p>
                 <h2>ركز تفكيرك</h2>
                 <p>فيما إذا كان يسعدك القيام بهذا العمل أو لا</p>
                 <h2>هذا ليس امتحانا؛</h2>
                 <p>ما من إجابات صحيحة أو خاطئة..</p>
-                <h2>خذ وقتك..</h2>
-                <p>في استيعاب السؤال وإجابته</p>
                 <p>أنت تستكشف اهتماماتك لتتمكن من إيجاد عمل تشعر بقيمته وتسعد بأدائه</p>
             </section>
-            <section>
-                <h2>السؤال الأول</h2>
-                <form action="#" class="question">
-                    <input type="radio" id="1" name="Q1" value="1">
-                    <label for="1">1</label><br>
-                    <input type="radio" id="2" name="Q1" value="2">
-                    <label for="2">2</label><br>
-                    <input type="radio" id="3" name="Q1" value="3">
+            <section id="test-questions">
+                <form action="" id="test-app"></form>
+                <h2 id="Q1_label">السؤال الأول</h2>
+                    <input type="radio" id="1" name="Q1" value="1"  aria-labelledby="Q1_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q1" value="2"  aria-labelledby="Q1_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q1" value="3"  aria-labelledby="Q1_label">
                     <label for="3">3</label>
-                    <input type="radio" id="4" name="Q1" value="4">
-                    <label for="4">4</label><br>
-                    <input type="radio" id="5" name="Q1" value="5">
-                    <label for="5">5</label><br>
-                    <input type="radio" id="6" name="Q1" value="6">
+                    <input type="radio" id="4" name="Q1" value="4"  aria-labelledby="Q1_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q1" value="5"  aria-labelledby="Q1_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q1" value="6"  aria-labelledby="Q1_label">
                     <label for="6">6</label>
-                    <input type="radio" id="7" name="Q1" value="7">
+                    <input type="radio" id="7" name="Q1" value="7"  aria-labelledby="Q1_label">
                     <label for="7">7</label>
-                <!--select-->
+                <!--select 1-->
+                <h2 id="Q2_label">السؤال الثاني</h2>
+                    <input type="radio" id="1" name="Q2" value="1"  aria-labelledby="Q2_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q2" value="2" aria-labelledby="Q2_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q2" value="3" aria-labelledby="Q2_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q2" value="4" aria-labelledby="Q2_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q2" value="5" aria-labelledby="Q2_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q2" value="6" aria-labelledby="Q2_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q2" value="7" aria-labelledby="Q2_label">
+                    <label for="7">7</label>
+                <!--select 2-->
+                <h2 id="Q3_label">السؤال الثالث</h2>
+                    <input type="radio" id="1" name="Q3" value="1" aria-labelledby="Q3_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q3" value="2" aria-labelledby="Q3_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q3" value="3" aria-labelledby="Q3_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q3" value="4" aria-labelledby="Q3_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q3" value="5" aria-labelledby="Q3_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q3" value="6" aria-labelledby="Q3_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q3" value="7" aria-labelledby="Q3_label">
+                    <label for="7">7</label>
+                <!--select 3-->
+                <h2 id="Q4_label">السؤال الرابع</h2>
+                    <input type="radio" id="1" name="Q4" value="1" aria-labelledby="Q4_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q4" value="2" aria-labelledby="Q4_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q4" value="3" aria-labelledby="Q4_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q4" value="4" aria-labelledby="Q4_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q4" value="5" aria-labelledby="Q4_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q4" value="6" aria-labelledby="Q4_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q4" value="7" aria-labelledby="Q4_label">
+                    <label for="7">7</label>
+                <!--select 4-->
+                <h2 id="Q5_label">السؤال الخامس</h2>
+                    <input type="radio" id="1" name="Q5" value="1" aria-labelledby="Q5_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q5" value="2" aria-labelledby="Q5_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q5" value="3" aria-labelledby="Q5_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q5" value="4" aria-labelledby="Q5_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q5" value="5" aria-labelledby="Q5_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q5" value="6" aria-labelledby="Q5_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q5" value="7" aria-labelledby="Q5_label">
+                    <label for="7">7</label>
+                <!--select 5-->
+                <h2 id="Q6_label">السؤال السادس</h2>
+                    <input type="radio" id="1" name="Q6" value="1" aria-labelledby="Q6_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q6" value="2" aria-labelledby="Q6_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q6" value="3" aria-labelledby="Q6_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q6" value="4" aria-labelledby="Q6_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q6" value="5" aria-labelledby="Q6_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q6" value="6" aria-labelledby="Q6_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q6" value="7" aria-labelledby="Q6_label">
+                    <label for="7">7</label>
+                <!--select 6-->
+                <h2 id="Q7_label">السؤال السابع</h2>
+                    <input type="radio" id="1" name="Q7" value="1" aria-labelledby="Q7_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q7" value="2" aria-labelledby="Q7_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q7" value="3" aria-labelledby="Q7_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q7" value="4" aria-labelledby="Q7_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q7" value="5" aria-labelledby="Q7_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q7" value="6" aria-labelledby="Q7_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q7" value="7" aria-labelledby="Q7_label">
+                    <label for="7">7</label>
+                <!--select 7-->
+                <h2 id="Q8_label">السؤال الثامن</h2>
+                    <input type="radio" id="1" name="Q8" value="1" aria-labelledby="Q8_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q8" value="2" aria-labelledby="Q8_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q8" value="3" aria-labelledby="Q8_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q8" value="4" aria-labelledby="Q8_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q8" value="5" aria-labelledby="Q8_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q8" value="6" aria-labelledby="Q8_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q8" value="7" aria-labelledby="Q8_label">
+                    <label for="7">7</label>
+                <!--select 8-->
+                <h2 id="Q9_label">السؤال التاسع</h2>
+                    <input type="radio" id="1" name="Q9" value="1" aria-labelledby="Q9_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q9" value="2" aria-labelledby="Q9_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q9" value="3" aria-labelledby="Q9_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q9" value="4" aria-labelledby="Q9_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q9" value="5" aria-labelledby="Q9_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q9" value="6" aria-labelledby="Q9_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q9" value="7" aria-labelledby="Q9_label">
+                    <label for="7">7</label>
+                <!--select 9-->
+                <h2 id="Q10_label">السؤال العاشر</h2>
+                    <input type="radio" id="1" name="Q10" value="1" aria-labelledby="Q10_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q10" value="2" aria-labelledby="Q10_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q10" value="3" aria-labelledby="Q10_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q10" value="4" aria-labelledby="Q10_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q10" value="5" aria-labelledby="Q10_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q10" value="6" aria-labelledby="Q10_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q10" value="7" aria-labelledby="Q10_label">
+                    <label for="7">7</label>
+                <!--select 10-->
+                <h2 id="Q11_label">السؤال الحادي عشر</h2>
+                    <input type="radio" id="1" name="Q11" value="1" aria-labelledby="Q11_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q11" value="2" aria-labelledby="Q11_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q11" value="3" aria-labelledby="Q11_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q11" value="4" aria-labelledby="Q11_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q11" value="5" aria-labelledby="Q11_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q11" value="6" aria-labelledby="Q11_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q11" value="7" aria-labelledby="Q11_label">
+                    <label for="7">7</label>
+                <!--select 11-->
+                <h2 id="Q12_label">السؤال الثاني عشر</h2>
+                    <input type="radio" id="1" name="Q12" value="1" aria-labelledby="Q12_label">
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="Q12" value="2" aria-labelledby="Q12_label">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="Q12" value="3" aria-labelledby="Q12_label">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="Q12" value="4" aria-labelledby="Q12_label">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="Q12" value="5" aria-labelledby="Q12_label">
+                    <label for="5">5</label>
+                    <input type="radio" id="6" name="Q12" value="6" aria-labelledby="Q12_label">
+                    <label for="6">6</label>
+                    <input type="radio" id="7" name="Q12" value="7" aria-labelledby="Q12_label">
+                    <label for="7">7</label>
+                <!--select 12-->
             </section>
             
             <!--loading bar-->
-            <input type="button" value="التالي">
-            <!--next button-->
+            <button type="button" role="button" id="prevBtn" onclick="nextPrev(-1)">السابق</button>
+            <button type="button" role="button" id="nextBtn" onclick="nextPrev(1)">التالي</button>
+            <!-- previous & next buttons-->
         </main>
         <footer>
             <ul class="nobullets main-nav">
@@ -75,7 +273,7 @@
                 <li><a href="test.html">اختبار</a></li>
             </ul>
             <hr>
-            جميع الحقوق محفوظة لمؤسسة مُتقِن | تصميم وتنفيذ جنات وآية
+            جميع الحقوق محفوظة لصالح مُتقِن للتصميم والبرمجيات | تصميم وتنفيذ جنات وآية
             <!--copyright notice-->
         </footer>
         </body>

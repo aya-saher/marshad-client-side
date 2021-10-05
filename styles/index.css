@@ -3,7 +3,7 @@
 body {  
     margin: 0;
     background-color: var(--white-color-2);
-    font-family: "Noto Sans Arabic";
+    font-family: var(--body-font-family);
 }
 
 h1, h2, h3, h4 {
@@ -15,6 +15,9 @@ h1{
     color:var(--white-color-1);
 }
 
+#test-questions h2{
+    color: var(--black-color-1);
+}
 /*
 ul { }
 
@@ -73,12 +76,12 @@ header{
     background-color: var(--primary-color-1);
     color:var(--white-color-1);
 }
-
+/*
 .question {
     display: flex;
     justify-content: space-around;
 }
-
+*/
 footer{
     height: 400px;
     background-color: var(--white-color-3);
@@ -117,37 +120,41 @@ footer{
 /* || Header and Main Navigation */
 
 
-/* || global CSS properties */
+/* || Global CSS Properties */
 :root {
-    /*primary color shades*/
+    /*Primary color shades*/
     --primary-color-1: #004C38;
     --primary-color-2: #004C38;
     --primary-color-3: #004C38;
     --primary-color-4: #004C38;
     --primary-color-5: #004C38;
-    /*secondary color shades*/
+    /*Secondary color shades*/
     --secondary-color-1: #F8A306;
     --secondary-color-2: #F8A306;
     --secondary-color-3: #F8A306;
     --secondary-color-4: #F8A306;
     --secondary-color-5: #F8A306;
-    /*teritary color shades*/
+    /*Teritary color shades*/
     --red-color-1: red;
     --red-color-2: red;
     --red-color-3: red;
     --red-color-4: red;
     --red-color-5: red;
-    /*white shades*/
+    /*White shades*/
     --white-color-1: #FFFFFF;
     --white-color-2: #F7F7F7;
     --white-color-3: #EEEEEE;
     --white-color-4: #F7F7F7;
     --white-color-5: #F7F7F7;
-    /*black shades*/
+    /*Black shades*/
     --black-color-1: #000000;
     --black-color-2: #000000;
     --black-color-3: #000000;
     --black-color-4: #000000;
     --black-color-5: #000000;
+    /*Fonts*/
+    --body-font-family: "Noto Sans Arabic";
+    --heading-font-family: Tajawal;
+    /*Text sizes*/
   }
   
