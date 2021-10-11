@@ -192,3 +192,251 @@ footer{
     /*Text sizes*/
   }
   
+  /* || Basic styling, nav tutorial*/
+/** {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}*/
+
+/*nav {
+    padding: 0 15px;
+}*/
+a {
+    text-decoration: none;
+}
+.menu,
+.submenu {   
+    list-style-type: none;
+}
+/*.logo {
+    
+    padding: 7.5px 10px 7.5px 0;
+}*/
+.item {
+    padding: 10px;
+}
+.item.button {
+    padding: 9px 5px;
+}
+.item:not(.button) a:hover,
+.item a:hover::after {
+    color: var(--white-color-2);
+}
+
+
+
+/*The CSS trick here is that we make regular menu items such as Home and About
+span across the entire container using the width: 100%; rule.
+So, flexbox will display them below each other,
+while the logo and toggle will retain their natural sizes and sit on top of the navbar in the same row. 
+
+In the CSS below, we also use the justify-content and align-items properties to align the flex items horizontally and vertically.
+Besides this, we hide the .item elements using the display: none; rule.
+Menu items will be only revealed when the user clicks the toggle button.
+The .active class is not in the HTML code, we will dynamically add it with JavaScript.*/
+
+/* Mobile menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu li a {
+    display: block;
+    padding: 15px 5px;
+}
+.menu li.subitem a {
+    padding: 15px;
+}
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+.item.button {
+    order: 2;
+}
+.item {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+.active .item {
+    display: block;
+}
+.button.secondary { /* divider between buttons and menu links */
+    border-bottom: 1px #444 solid;
+}
+
+/*
+As you can see above, we have also changed the order of menu items with the help of the order property.
+Our HTML outline follows a logical order. This is how we want screen reader users and search engine bots to go through the menu. 
+
+However, in the mobile layout, we want to show the logo and toggle button on top of the menu.
+We also want to display the two call-to-action buttons (“Log In” and “Sign Up”) before regular menu items.
+So, we set up the following order:
+
+    .logo gets the order: 0; value, as it will be the first item (however, as this is the default value of order, we don’t need to add it to the CSS),
+    .toggle gets 1, as it comes right after .logo,
+    .item.button belonging to the Log In and Sign Up buttons gets 2,
+    and .item belonging to the rest of menu items gets 3.
+*/
+
+/*
+As this is mobile-first navigation, we’ll primarily style the submenu with mobile screens in mind.
+This is a great technique, as it’s usually harder to create a user-friendly submenu for small screens than for larger ones.
+Then, we can use the same submenu layout for tablet screens as well.
+For desktop, we’ll only need to change the positioning of the submenu.
+
+By default, the submenu is set to display: none; and will be only revealed when the user clicks the parent menu item.
+We will add the required JavaScript functionality in the next two steps before moving on to the tablet menu.
+*/
+
+/* Submenu up from mobile screens */
+.submenu {
+    display: none;
+}
+.submenu-active .submenu {
+   display: block;
+}
+.has-submenu i {
+    font-size: 12px;
+}
+.has-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900; 
+    content: "\f078";
+    color: var(--white-color-1);
+    padding-left: 5px;
+}
+.subitem a {
+    padding: 10px 15px;
+}
+.submenu-active {
+    background-color: var(--primary-color-1);
+    border-radius: 3px;
+}
+
+/*we add the Font Awesome icons using CSS instead of HTML.
+These icons we add using the ::after pseudo element will be the little down arrows shown next to each menu item that has a submenu. */
+/*we added the Font Awesome icon for the toggle button with HTML in Step 1.
+This is because the toggle button will be targeted with JavaScript, so it has to be present in the DOM.
+However, the down arrows here are just style elements that indicate the presence of the submenu.
+Since no functionality relies on them, it’s better to add them with CSS.*/
+
+/*We’ll create the tablet layout using a min-width media query. On tablet, four menu items will be visible by default: the logo, the two call-to-action buttons (“Log In” and “Sign Up”), and the toggle. To make everything pretty, our CSS will:
+
+    change the order of the menu items to adapt the layout to tablet viewports,
+    realign the items (see the explanation below),
+    make the Log In and  Sign Up buttons look like real buttons (in the mobile layout, they look like links, as they are part of the toggleable dropdown list).
+*/
+
+/* Tablet menu */
+@media all and (min-width: 700px) {
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+    }
+    /* Button up from tablet screen */
+    .menu li.button a {
+        padding: 10px 15px;
+        margin: 5px 0;
+    }
+    .button a {
+        background: var(--primary-color-2);
+        border: 1px var(--primary-color-1);
+        color: var(--white-color-1);
+    }
+    .button.secondary {
+        border: 0;
+        color: var(--primary-color-1);
+    }
+    .button.secondary a {
+        background: transparent;
+        border: 1px var(--primary-color-1) solid;  
+    }
+    .button a:hover {
+        text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+        background: var(--primary-color-3);
+        border-color: var(--primary-color-1);
+    }
+}
+
+/*
+In the tablet layout, menu items are aligned in a different way.
+If you take a look at the four visible menu items, you will see that the two buttons are displayed in the center,
+while the logo and toggle are pushed to the left and right end of the container
+*/
+
+/*
+We can achieve this effect using the flex: 1; CSS rule. The flex property is a shorthand for flex-grow, flex-shrink, and flex-basis.
+It can exist with many different value combinations.
+When it’s declared with only one value, it belongs to flex-grow, with flex-shrink and flex-basis keeping their default values.
+
+In the CSS above, we have added the flex: 1; rule to the .logo and .toggle elements.
+In this way, we can tell the browser that if there’s any positive space on the screen, we want to share it between these two elements.
+As the Log In and Sign Up buttons retain their default 0 value for flex-grow, they won’t get anything from the extra space.
+So, they will stay in the center of the container, as they adhere to the justify-content: center; rule set on the flex container.
+*/
+
+
+/*The Desktop Menu
+The desktop menu hides the toggle, sets back the original order and natural width of each item, and repositions the submenu. 
+
+It’s important to keep in mind that the tablet-specific rules also apply to the desktop menu.
+This is because here, the viewport width is larger than both 700px and 960px, so both media queries take effect.
+So, .logo retains its flex: 1; property and pushes the rest of the items to the end of the container.
+*/
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+    .menu {
+        align-items: flex-start;     
+        flex-wrap: nowrap;
+        background: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+        position: relative;
+        display: block; 
+        width: auto;
+    }
+    .button {
+        order: 2;
+    }
+    .submenu-active .submenu {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 68px;
+        background: var(--white-color-2);
+    }
+    .toggle {
+        display: none;
+    }
+    .submenu-active {
+        border-radius: 0;
+    }
+}
+
