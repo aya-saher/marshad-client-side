@@ -12,18 +12,45 @@
             Why is this needed?
             Because mobile browsers tend to lie about their viewport width.-->
         <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <!--including Fontawesome library-->
+        <script src="script.js"></script>
     </head>
     <body>
         <nav>
-            <a href="#" class="logo"><img src="images/Marshad logo.png" width="110px" height="60px"></a>
+            <!--<a href="#" class="logo"><img src="images/Marshad logo.png"></a>-->
             <!--logo-->
-            <ul class="nobullets main-nav">
-                <li><a href="#">المدونة</a></li>
-                <li><a href="#">تصفح</a></li>
-                <li><a href="#">تواصل</a></li>
-                <li><a href="test.html">اختبار</a></li>
+            <ul class="nobullets main-nav menu">
+                <li class="item"><a href="#">المدونة</a></li>
+                <li class="item has-submenu">
+                    <a tabindex="0">تصفح</a>
+                    <ul class="submenu">
+                        <li class="subitem"><a href="#">Design</a></li>
+                        <li class="subitem"><a href="#">Development</a></li>
+                        <li class="subitem"><a href="#">SEO</a></li>
+                        <li class="subitem"><a href="#">Copywriting</a></li>
+                    </ul>
+                    <!--menu items with a submenu (“Services” and “Plans”)
+                        have an <a> tag without an href attribute.
+                        We do this because these “empty” parent menu items don’t lead to
+                        any other page–they just open and close the submenu. -->
+                    <!--We also add the tabindex="0" attribute to <a> elements without a href attribute.
+                        This is because empty <a> tags are omitted from the default tab order,
+                            so we need to put them back to the tabbing order with the tabindex attribute
+                            to keep the menu keyboard-accessible.-->
+                </li>
+                <li class="item"><a href="#">تواصل</a></li>
+                <li class="item"><a href="test.html">اختبار</a></li>
+
+                <!--<input type="button" value="تسجيل الدخول" class="login item button">-->
+                <li class="item button"><a href="#">دخول</a></li>
+                <li class="item button secondary"><a href="#">التسجيل</a></li>
+
+                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+                <!--Note: the toggle button at the end of the list uses a Font Awesome icon.
+                    To make the demo work, you’ll need to add the Font Awesome library to the <head> section of the HTML document from CDN-->
             </ul>
-            <input type="button" value="تسجيل الدخول" class="login">
+            
         </nav>
         <header>
             <h1>مَرشَد</h1>
