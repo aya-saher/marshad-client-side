@@ -66,14 +66,22 @@
                 -->
                 <!--interests-test results should be there-->
                 <button type="button" role="button" id="interests" onclick="">استكشف الاهتمامات</button>
+                <!--this button should take the user to the "interests page" for further exploring-->
+                <!--
                 <button type="button" role="button" id="job-zones" onclick="">نطاقات العمل</button>
+                this button should take the user to the job zones,
+                redundant with the link (should become tab) in the beginning of the page
+                -->
             </section>
-            <section id="job-zones">
+            <article id="job-zones">
+                <section class="header">
                 <!--
                     <h1>الاهتمامات + نطاق العمل = الوظائف</h1>
                     <p>كل وظيفة تندرج ضمن واحد من خمس نطاقات،
                     وهي مجموعات من الوظائف تحتاج ذات المقدار من التأهيل.</p>
                 -->
+                <!--should be the header for this page, dynamically?-->
+                </section>
                 <p>
                     لتضييق نطاق بحثك، فكر..
                     ما مقدار التأهيل )التعليم، أو التدريب، أو الخبرة(
@@ -85,20 +93,23 @@
                     بناء على اهتماماتك، سيساعدك محلل الاهتمامات
                     على استكشاف وتحديد وظائف يمكن أن تناسبك.
                 </p>
-                <h2>الحالي، أم المستقبلي؟</h2>
-                <p>
-                    عند اختيار نطاق العمل يمكنك اختيار..
+                <section>
+                    <h2>الحالي، أم المستقبلي؟</h2>
+                    <p>
+                        عند اختيار نطاق العمل يمكنك اختيار..
 
-                    <h3>نطاق عملك الحالي:</h3>
-                    تختار نطاق العمل الذي يتوافق مع مقدار التأهيل الذي لديك الآن.<br>
-                    أو<br>
-                    <h3>نطاق عمل مستقبلي:</h3>
-                    تختار نطاق العمل الذي يوافق مقدار التأهيل الذي تخطط لتحصيله في المستقبل.
+                        <h3>نطاق عملك الحالي:</h3>
+                        تختار نطاق العمل الذي يتوافق مع مقدار التأهيل الذي لديك الآن.<br>
+                        أو<br>
+                        <h3>نطاق عمل مستقبلي:</h3>
+                        تختار نطاق العمل الذي يوافق مقدار التأهيل الذي تخطط لتحصيله في المستقبل.
 
-                    في كلا الحالتين، نطاق العمل الذي تختاره سيتضمن وظائف يمكن أن تناسبك.
+                        في كلا الحالتين، نطاق العمل الذي تختاره سيتضمن وظائف يمكن أن تناسبك.
 
-                    لا تقلق بخصوص اتخاذ الخيار الخاطئ؛ يمكنك لاحقا استكشاف نطاق عمل آخر.
-                </p>
+                        لا تقلق بخصوص اتخاذ الخيار الخاطئ؛ يمكنك لاحقا استكشاف نطاق عمل آخر.
+                    </p>
+                </section>
+                <section>
                 <h2>استكشف نطاقات العمل</h2>
                 <p>
                     يمكنك قراءة المزيد عن مقدار التأهيل الذي يحتاجه كل نطاق عمل،
@@ -122,33 +133,37 @@
                 <!--
                 <img src="images/interests.png">
                 -->
-                <h2 id="job-zone-select">اختر نطاق العمل</h2>
-                <p>
-                    بعد أن أخذت لمحة عن نطاقات العمل،
-                    اختر نطاق العمل الحالي أو المستقبلي الذي يناسبك:
-                </p>
-                <form action="" id="test-app">
-                    <input type="radio" id="1" name="job-zone" value="1"  aria-labelledby="job-zone-select">
-                    <label for="1">1. تأهيل بسيط أو لا تحتاج إلى تأهيل</label>
-                    <br>
-                    <input type="radio" id="2" name="job-zone" value="2"  aria-labelledby="job-zone-select">
-                    <label for="2">2. قليل من التأهيل</label>
-                    <br>
-                    <input type="radio" id="3" name="job-zone" value="3"  aria-labelledby="job-zone-select">
-                    <label for="3">3. تأهيل متوسط</label>
-                    <br>
-                    <input type="radio" id="4" name="job-zone" value="4"  aria-labelledby="job-zone-select">
-                    <label for="4">4. تأهيل عالي</label>
-                    <br>
-                    <input type="radio" id="5" name="job-zone" value="5"  aria-labelledby="job-zone-select">
-                    <label for="5">5. تأهيل واسع</label>
-                    <br>
-                <!--
-                <img src="images/select.png">
-                -->
-                    <button type="submit" role="button" id="careers-btn" onclick="">الوظائف المقترحة</button>
-                </form>
-            </section>
+                </section>
+                <section>
+                    <h2 id="job-zone-select">اختر نطاق العمل</h2>
+                    <p>
+                        بعد أن أخذت لمحة عن نطاقات العمل،
+                        اختر نطاق العمل الحالي أو المستقبلي الذي يناسبك:
+                    </p>
+                    <form action="" id="test-app">
+                        <input type="radio" id="1" name="job-zone" value="1"  aria-labelledby="job-zone-select">
+                        <label for="1">1. تأهيل بسيط أو لا تحتاج إلى تأهيل</label>
+                        <br>
+                        <input type="radio" id="2" name="job-zone" value="2"  aria-labelledby="job-zone-select">
+                        <label for="2">2. قليل من التأهيل</label>
+                        <br>
+                        <input type="radio" id="3" name="job-zone" value="3"  aria-labelledby="job-zone-select">
+                        <label for="3">3. تأهيل متوسط</label>
+                        <br>
+                        <input type="radio" id="4" name="job-zone" value="4"  aria-labelledby="job-zone-select">
+                        <label for="4">4. تأهيل عالي</label>
+                        <br>
+                        <input type="radio" id="5" name="job-zone" value="5"  aria-labelledby="job-zone-select">
+                        <label for="5">5. تأهيل واسع</label>
+                        <br>
+                    <!--
+                    <img src="images/select.png">
+                    -->
+                        <button type="submit" role="button" id="careers-btn" onclick="">الوظائف المقترحة</button>
+                    <!--this button should submit the job-zone radio, to view the list of suggested careers-->
+                    </form>
+                </section>
+            </article>
             <section id="careers">
                 <!--
                     <h1>الوظائف المقترحة</h1>
