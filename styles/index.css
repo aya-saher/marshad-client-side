@@ -5,6 +5,10 @@ body {
     background-color: var(--white-color-2);
     font-family: var(--body-font-family);
     font-size: calc(0.50rem + 1vw);
+    min-height: 100%vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 h1, h2, h3, h4 {
@@ -52,16 +56,16 @@ blockquote {  }
 nav { 
     height: 90px;
     background: var(--white-color-1);
-    display: flex;
+    /*display: flex;
     justify-content: space-around;
-    align-items: center;
-    font-weight: 600;    
+    align-items: center;*/
+    font-weight: 600;
+    flex-shrink: 0;   
  }
 
 .main-nav { 
-    display: flex;
-    /*width: 560px;*/
-    justify-content: space-between;
+    /*display: flex;    
+    justify-content: space-between;*/
     font-family: Tajawal;
     
  }
@@ -99,7 +103,9 @@ button{
 }
 
 .logo { 
-    justify-self: right;   
+    justify-self: start;
+    width: 60px;
+    height: auto;
     /*width = 110px;
     height = 60px;*/  
  }
@@ -117,12 +123,39 @@ header{
 }
 */
 footer{
-    /*height: 50vw;*/
+    padding-bottom: 40;
+    padding-top: 40;
     background-color: var(--white-color-3);
+    flex-shrink: 0;
+    height: 100px; 
+    margin: 0;   
+}
+
+footer>ul{
+    /*height: 50vw;*/
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+}
+
+footer li a {
+    display: block;
+    padding: 15px 5px;
+}
+footer li.subitem a {
+    padding: 15px;
+}
+
+footer span{
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer hr{
+    width: 50vw;
 }
 
  /* unvisited link */
@@ -199,9 +232,9 @@ footer{
     margin: 0;
 }*/
 
-/*nav {
+nav {
     padding: 0 15px;
-}*/
+}
 a {
     text-decoration: none;
 }
@@ -350,7 +383,7 @@ Since no functionality relies on them, it’s better to add them with CSS.*/
     }
     .toggle {
         flex: 1;
-        text-align: right;
+        text-align: end;
         order: 2;
     }
     /* Button up from tablet screen */
