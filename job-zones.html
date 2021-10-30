@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <!--the main language of the document is Arabic
+        and the direction "Right-to-Left"-->
+    <head>
+        <title>مَرشَد</title>
+        <!--the website's title for the browser tab-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="https://developer.mozilla.org/static/img/favicon32.png">
+        <!--the website's icon (needs update)-->
+        <meta charset="utf-8">
+        <meta name="author" content="Jannat Mgawshi, Aya Saher">
+        <meta name="description" content="Career counselling platform">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!--This meta tag tells mobile browsers that they should set the width of the viewport to the device width,
+            and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
+            Why is this needed?
+            Because mobile browsers tend to lie about their viewport width.-->
+        <meta property="og:image" content="">
+        <meta property="og:description" content="">
+        <meta property="og:title" content="مَرشَد للإرشاد المهني">
+        <!--Open Graph Data is a metadata protocol that Facebook invented to provide richer metadata for websites
+            One effect of this is that when you link to the Website on facebook,
+            the link appears along with an image and description: a richer experience for users.-->
+        <meta name="twitter:title" content="مَرشَد للإرشاد المهني">
+        <!--metadata property called Twitter Cards-->
+        <link rel="stylesheet" href="styles/index.css">
+        <!--stylesheet, which indicates that it is the document's stylesheet,
+            and href, which contains the path to the stylesheet file-->
+        <script src="" defer></script>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html" class="logo"><img src="images/Marshad logo.png" width="110px" height="60px"
+                alt="Marshad logo"></a>
+            <!--logo-->
+            <ul class="nobullets main-nav">
+                <li><a href="#">المدونة</a></li>
+                <li><a href="#">تصفح</a></li>
+                <li><a href="#">تواصل</a></li>
+                <li><a href="test.html">اختبار</a></li>
+            </ul>
+            <input type="button" value="تسجيل الدخول" class="login">
+        </nav>
+        <header>
+            <h1>نتائج تحليل اهتماماتك!</h1>
+            <p>تعامل مع اهتماماتك على أنها أعمال تحب أدائها..
+            </p>    
+        </header>
+        <main>
+            <article id="job-zones">
+                <section class="header">
+                    <h1>الاهتمامات + نطاق العمل = الوظائف</h1>
+                    <p>كل وظيفة تندرج ضمن واحد من خمس نطاقات،
+                    وهي مجموعات من الوظائف تحتاج ذات المقدار من التأهيل.</p>
+                </section>
+                <p>
+                    لتضييق نطاق بحثك، فكر..
+                    ما مقدار التأهيل )التعليم، أو التدريب، أو الخبرة(
+                    التي أحتاجها لأداء هذا العمل؟
+
+                    تحتاج الوظائف المختلفة لدرجات متفاوتة من التأهيل،
+                    لذا سنطلب منك اختيار نطاق عمل..
+
+                    بناء على اهتماماتك، سيساعدك محلل الاهتمامات
+                    على استكشاف وتحديد وظائف يمكن أن تناسبك.
+                </p>
+                <section>
+                    <h2>الحالي، أم المستقبلي؟</h2>
+                    <p>
+                        عند اختيار نطاق العمل يمكنك اختيار..
+
+                        <h3>نطاق عملك الحالي:</h3>
+                        تختار نطاق العمل الذي يتوافق مع مقدار التأهيل الذي لديك الآن.<br>
+                        أو<br>
+                        <h3>نطاق عمل مستقبلي:</h3>
+                        تختار نطاق العمل الذي يوافق مقدار التأهيل الذي تخطط لتحصيله في المستقبل.
+
+                        في كلا الحالتين، نطاق العمل الذي تختاره سيتضمن وظائف يمكن أن تناسبك.
+
+                        لا تقلق بخصوص اتخاذ الخيار الخاطئ؛ يمكنك لاحقا استكشاف نطاق عمل آخر.
+                    </p>
+                </section>
+                <section>
+                <h2>استكشف نطاقات العمل</h2>
+                <p>
+                    يمكنك قراءة المزيد عن مقدار التأهيل الذي يحتاجه كل نطاق عمل،
+                    لتتمكن من إيجاد نطاق العمل الأنسب لك.
+                    <br><br>
+                    <ol>
+                        <a><li>تأهيل بسيط أو لا تحتاج إلى تأهيل<br>
+                            little or no job preparation</li></a>
+                        <a><li>قليل من التأهيل<br>
+                            some job preparation</li></a>
+                        <a><li>تأهيل متوسط<br>
+                            meduim job preparation</li></a>
+                        <a><li>تأهيل عالي<br>
+                            high job preparation</li></a>
+                        <a><li>تأهيل واسع<br>
+                            extensive job preparation</li></a>
+                        <!--these links should open an overlay-->
+                    </ol>
+                </p>
+                <!--interests-test results should be there-->
+                <!--
+                <img src="images/interests.png">
+                -->
+                </section>
+                <section>
+                    <h2 id="job-zone-select">اختر نطاق العمل</h2>
+                    <p>
+                        بعد أن أخذت لمحة عن نطاقات العمل،
+                        اختر نطاق العمل الحالي أو المستقبلي الذي يناسبك:
+                    </p>
+                    <form action="" id="test-app">
+                        <input type="radio" id="1" name="job-zone" value="1"  aria-labelledby="job-zone-select">
+                        <label for="1">1. تأهيل بسيط أو لا تحتاج إلى تأهيل</label>
+                        <br>
+                        <input type="radio" id="2" name="job-zone" value="2"  aria-labelledby="job-zone-select">
+                        <label for="2">2. قليل من التأهيل</label>
+                        <br>
+                        <input type="radio" id="3" name="job-zone" value="3"  aria-labelledby="job-zone-select">
+                        <label for="3">3. تأهيل متوسط</label>
+                        <br>
+                        <input type="radio" id="4" name="job-zone" value="4"  aria-labelledby="job-zone-select">
+                        <label for="4">4. تأهيل عالي</label>
+                        <br>
+                        <input type="radio" id="5" name="job-zone" value="5"  aria-labelledby="job-zone-select">
+                        <label for="5">5. تأهيل واسع</label>
+                        <br>
+                    <!--
+                    <img src="images/select.png">
+                    -->
+                        <button type="submit" role="button" id="careers-btn" onclick="">الوظائف المقترحة</button>
+                    <!--this button should submit the job-zone radio, to view the list of suggested careers-->
+                    </form>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
